@@ -4,7 +4,8 @@ import seaborn as sns
 import matplotlib.ticker as ticker
 
 
-def sns_cntplt_array(dat, TITLE='Chart_Title', export=False):
+def sns_cntplt_array(dat, chart_title='Chart_Title', export=False):
+    assert type(dat)==list, 'Data entered must be an array or list'
     dfWIM = pd.DataFrame({'AXLES': dat})
     ncount = len(dfWIM)
     order = dfWIM[dfWIM.columns[0]].unique()
@@ -12,7 +13,7 @@ def sns_cntplt_array(dat, TITLE='Chart_Title', export=False):
 
     plt.figure(figsize=(12, 8))
     ax = sns.countplot(x="AXLES", data=dfWIM, order=order)
-    plt.title(TITLE)
+    plt.title(chart_title)
     plt.xlabel('Number of Axles')
 
     # Make twin axis
@@ -46,6 +47,5 @@ def sns_cntplt_array(dat, TITLE='Chart_Title', export=False):
 
     # Need to turn the grid on ax2 off, otherwise the gridlines end up on top of the bars
     ax2.grid(None)
-    if not export:
-        plt.savefig(TITLE+'.pdf')
-
+    if export:
+        plt.savefig(chart_title + '.pdf')

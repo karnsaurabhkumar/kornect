@@ -24,6 +24,6 @@ def update_progress(progress):
         progress = 1
         status = "Done...\r\n"
     block = int(round(barLength * progress))
-    text = "\rPercent Completion: [{0}] {1}% {2}".format("#" * block + "-" * (barLength - block), progress * 100,status)
+    text = f"\rPercent Completion: [{'#' * block + '-' * (barLength - block)}] {progress * 100:.2f}% {status}"
     sys.stdout.write(text)
     sys.stdout.flush()
