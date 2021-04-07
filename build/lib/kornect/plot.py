@@ -48,4 +48,5 @@ def sns_cntplt_array(dat, TITLE='Chart_Title', export=False):
     # Need to turn the grid on ax2 off, otherwise the gridlines end up on top of the bars
     ax2.grid(None)
     if not export:
-        plt.savefig('snscounter.pdf')
+        plt.savefig(TITLE+'.pdf')
+

@@ -1,3 +1,6 @@
+#Empty dist folder
+rm -r dist/*
+
 #Build the project
 python setup.py bdist_wheel
 
