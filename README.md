@@ -17,8 +17,12 @@ There are four different parts to the library that talks to specific needs while
 
 **Update Progress:** This takes a float as an input and creates a beautiful progress bar and shows you the percentage. No added libraries just pure python implementation.
 ```
-import kornect.utils as kutils
-kutils.update_progress(0.5)
+from kornect.utilities import update_progress
+import time
+
+for i in range(100):
+    update_progress(i/100.0)
+    time.sleep(0.01)
 
 ```
 
