@@ -9,5 +9,5 @@ def test_append_df2csv():
     return True
 
 
-def test_sns_cntplt_array(data=[1]):
+def test_sns_countplot_array(data=[1]):
     return True

@@ -5,7 +5,7 @@ kornect/__init__.py
 kornect/analysis.py
 kornect/pd.py
 kornect/plot.py
-kornect/utils.py
+kornect/utilities.py
 kornect.egg-info/PKG-INFO
 kornect.egg-info/SOURCES.txt
 kornect.egg-info/dependency_links.txt
