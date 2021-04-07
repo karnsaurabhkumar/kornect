@@ -1,9 +1,12 @@
-# Libraries
-# Following libraries are used to make the ppt2vid
-import sys
-import subprocess
-import pkg_resources
+import pandas as pd
 
 
-def install_pypackages(requirements):
+def append_df2csv(f_path, data):
+    import os
+    if not os.path.isfile(f_path):
+        pd.DataFrame().to_csv(f_path)
+    assert os.path.isfile(f_path), 'Please enter a valid file name'
+    assert type(data) == pd.core.frame.DataFrame, 'Only dataframes are allowed'
+    data.to_csv(f_path, mode='a', header=False, index=False)
     return 1
+
