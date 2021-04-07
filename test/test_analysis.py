@@ -1,6 +1,4 @@
-from kornect.analysis import *
-from kornect.plot import *
-import os
+from kornect.utilities import update_progress
 
 
 def test_update_progress():
