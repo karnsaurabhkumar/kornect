@@ -3,6 +3,7 @@ pyproject.toml
 setup.py
 kornect/__init__.py
 kornect/analysis.py
+kornect/data_collection.py
 kornect/pd.py
 kornect/plot.py
 kornect/utilities.py

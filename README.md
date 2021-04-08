@@ -18,6 +18,17 @@ from kornect.pd import rename_pd
 df = rename_pd(df,[col1,col2,col3],[new_col1,new_col2,new_col3])
 ```
 
+**IdSimilar:** Have a list or two where you want names or entities to be matched? Use a simple TfIdf vectorizer to help find similar names etc.
+
+
+**Join:** A simple function that takes two pandas dataframe as inputs and returns a joined dataset. The function tries to retain as much data as possible.
+
+
+**Parallelize:** A simple wrapper that takes a function and list of parameters and runs them in parallel to help you save the time and effort of dealing with more complicated multi-processing tools 
+
+
+
+
 ### 3. Data visualisation
 **Count Plot:** This will plot the frequency of elements in a list
 ```
