@@ -3,16 +3,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
 
-class landing_page():
-    def __init__(self, URL):
+class browser:
+    def __init__(self, URL, headless=True, no_image=True) -> object:
         self.url = URL
+        self.headless = headless
+        self.no_image = no_image
 
     def setup(self):
         options = Options()
-        options.add_argument('--headless')
-        prefs = {"profile.managed_default_content_settings.images": 2}
-        options.add_experimental_option("prefs", prefs)
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+        if self.headless:
+            options.add_argument('--headless')
+        if self.no_image:
+            prefs = {"profile.managed_default_content_settings.images": 2}
+            options.add_experimental_option("prefs", prefs)
+            self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+        elif not options:
+            self.driver = webdriver.Chrome(ChromeDriverManager().install())
         print('starting the browser')
 
     def close(self):
