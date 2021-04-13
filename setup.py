@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='kornect',
     packages=find_packages(),
-    version='0.1.6',
+    version='0.1.7',
     description='Set of utilities to rapidly do data analysis',
     author='Saurabh Karn',
     license='MIT',

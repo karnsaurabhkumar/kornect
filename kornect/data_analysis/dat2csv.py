@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def append_df2csv(f_path, data):
+def dat2csv(f_path, data):
     import os
     if not os.path.isfile(f_path):
         pd.DataFrame().to_csv(f_path)
